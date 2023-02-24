@@ -1,18 +1,4 @@
 clc,clear
-% 
-% % Specify the parent folder containing the subfolders
-% main_dir = '/Users/zhiweigong/Library/CloudStorage/OneDrive-JohnsHopkins/Attachments/JHU(1)/2023 Spring/Introduction to Research/Project/Latest_model/resp-mech-simulink-model/model/ModelData/PEEP7';
-% 
-% % RR subfolder
-% subFolders1 = dir(main_dir);
-% subFolders1 = subFolders1([subFolders1.isdir]);
-% subFolders1 = subFolders1(3:end); % Remove '.' and '..' entries
-
-% C_T subfolder
-
-
-% PaO subfolder
-
 
 % Top dir
 Top_dir = '/Users/zhiweigong/Library/CloudStorage/OneDrive-JohnsHopkins/Attachments/JHU(1)/2023 Spring/Introduction to Research/Project/Latest_model/resp-mech-simulink-model/model/ModelData';
@@ -48,15 +34,9 @@ for i = 7:10
                 whole = table(Time, Data(:, 1), Data(:, 2), Data(:, 3), Data(:, 4), 'VariableNames', DataName);
                 
                 % save data as .xlsx file
-                % path = '/Users/zhiweigong/Library/CloudStorage/OneDrive-JohnsHopkins/Attachments/JHU(1)/2023 Spring/Introduction to Research/Project/Latest_model/resp-mech-simulink-model/model/ModelData/PEEP7/RR12/C_T0.01/PaO15/Data';
                 writetable(whole, fullfile(Data_dir, 'Data.xlsx'));
             end
         end
     end
 
 end
-% sprintf('SSM_pc%d_%s.vtk', i, strcat(num2str(coeffs(j)), 'STD'))
-
-% A_path = '/Users/zhiweigong/Library/CloudStorage/OneDrive-JohnsHopkins/Attachments/JHU(1)/2023 Spring/Introduction to Research/Project/Latest_model/resp-mech-simulink-model/model/ModelData/PEEP7/RR12/C_T0.01/PaO15/Data';
-% main_dir = '/Users/zhiweigong/Library/CloudStorage/OneDrive-JohnsHopkins/Attachments/JHU(1)/2023 Spring/Introduction to Research/Project/Latest_model/resp-mech-simulink-model/model/ModelData/PEEP7/RR12/C_T0.01/PaO15/Data/data_Rc_1_Rp_0.5_Cs_0.005_Cw_0.02_CL_0.02.mat';
-
