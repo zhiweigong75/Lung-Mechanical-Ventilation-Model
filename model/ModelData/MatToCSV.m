@@ -30,7 +30,7 @@ for i = 7:10
                 % Add colume names and save data as a table
                 Time = data.Time;
                 Data = data.Data;
-                DataName = {'Time', 'Pressure', 'Flow', 'Volume', 'Data4'};
+                DataName = {'Time', 'Pressure', 'Flow', 'Volume', 'Qa(Airflow)'};
                 whole = table(Time, Data(:, 1), Data(:, 2), Data(:, 3), Data(:, 4), 'VariableNames', DataName);
                 
                 % save data as .xlsx file
